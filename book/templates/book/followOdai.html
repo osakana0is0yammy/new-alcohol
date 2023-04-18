@@ -1,0 +1,48 @@
+{% block content %}
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/stylemy.css' %}" />
+   
+
+</head>
+<div class="inner">
+<body bgcolor="#FFE4E1">
+    <h1></h1>
+    <div align="center">
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'index' %}" class="aiu">HOME</a></div>
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'new' %}" class="aiu">投稿</a></div>
+        <div style="border: 5px solid; width: 150px;" class="aiu"> <a href="{% url 'post'%}" class="aiu">登録済み</a></div>
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'mypage'%}" class="aiu">フォロー欄</a></div>
+    </div>
+
+    <br>
+<div class="an"></div>
+
+<br>
+    -----------------------
+    <div align="center">
+    {% for item in datas %}
+    <table>
+        <tr>
+        <td>
+            <a href="{% url 'startt' item.id%}">
+                <div align="left">{{item.user}}</div><br>
+                <div align="center">{{item.odai}}</div>
+            </a>
+        </td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+</div>
+  
+
+{% endblock %}
+</div>
+</body>
+</html>

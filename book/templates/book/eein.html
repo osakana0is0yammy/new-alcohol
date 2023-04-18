@@ -1,0 +1,36 @@
+<!--お絵描きの説明-->
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/style.css' %}" />
+   
+
+</head>
+<body bgcolor="#FFE4E1">
+    <div class = "inner">
+    <div align="center">
+        <h1></h1>
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'index' %}" class="aiu">HOME</a></div>
+        <br><br>
+            <div class="hige">
+                ――――――――――――――――――――――――――――――――――――――――――――――<br>
+                このゲームには何か書くものと紙と言った記載できるものを準備してください．<br>
+                まず最初にお題が提示されます．<br>
+                お題には「何を書くか」から始まり、「どの人を選ぶか」が表示され、<br>
+                「どの人が飲酒するか」が表示されます．<br>
+                とにかくやってみよ～～～～～～！！！！！！<br>
+                ―――――――――――――――――――――――――――――――――――――――――――――――
+            </div>
+            <br><br>
+            <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'ee' %}" class="aiu">次へ</a></div>
+        </div>
+        
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!--黒ひげ危機一髪の説明&種類選択-->
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/style.css' %}" />
+   
+
+</head>
+<body bgcolor="#FFE4E1">
+    <div class = "inner">
+    <div align="center">
+        
+        <div style="border: 5px solid; width: 600px;" class="btnin"><a href="{% url 'index' %}" class="aiu">選択画面に戻る</a></div>
+        <br><br>
+            ―――――――――――――――――――――――――――――――――――――――――――――――
+            <div class="hige">
+                「中級」「超級」二種類のステージが存在します．<br>
+                中級はランダムで低確率でが出現します<br>
+                超級はランダムで高確率でが出現します<br>
+                以下の中から選択してください．選択すると始まります．
+            </div>
+            <br>
+            ―――――――――――――――――――――――――――――――――――――――――――――――
+            <br><br>
+            <div style="border: 5px solid; width: 550px;" class="btnin"><a href="{% url 'osake' %}" class="aiu">お酒危機一髪・中級</a></div>
+            <div style="border: 5px solid; width: 550px;" class="btnin"><a href="{% url 'osaket' %}" class="aiu">お酒危機一髪・超</a></div>
+         </div>
+    </div>
+
+    
+</body>
+</html>

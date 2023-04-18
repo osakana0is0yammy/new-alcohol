@@ -1,0 +1,49 @@
+{% block content %}
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/stylenew.css' %}" />
+   
+
+</head>
+
+<body bgcolor="#FFE4E1">
+    <div class="inner">
+        <h1></h1>
+    <div align="center">
+        
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'index' %}" class="btn">HOME</a></div>
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'user' %}" class="btn">Mypage</a></div>
+
+    <br><br><br>
+        <table>
+        <form action="{% url 'new' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_table }}
+            <tr><td></td><td><input type="submit" class="new" value="次へ"></td></tr>
+        </form>
+    </table>
+    </div>
+
+<div class="an"></div>
+
+<br>
+<div align="center">
+   あなたの登録個数： {{data}}
+
+   <br>
+    {% for message in messages %}
+<div {% if message.tags %}class="{{ message.tags }}"{% endif %}>
+    {{ message }}
+</div>
+{% endfor %}
+{% endblock %}
+</div>
+</div>
+
+</body>
+</html>

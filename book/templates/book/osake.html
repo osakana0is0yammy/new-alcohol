@@ -1,0 +1,33 @@
+<!--お酒危機一髪-->
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/style.css' %}" />
+   
+
+</head>
+<body bgcolor="#FFE4E1">
+    <div align="center">
+        <div class = "inner">
+            <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'index' %}" class="aiu">終了</a></div>
+            <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'osakein' %}" class="aiu">説明に戻る</a></div><br><br>
+            {% for item in data %}
+            <p>{{item.Secontent}}</p>
+            {% endfor %}
+            <br>
+            <br>
+            <br>
+            <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'osake' %}" class="aiu">次へ</a></div>
+            <br><br><br>
+
+        </div>
+    </div>
+
+    
+</body>
+</html>
+

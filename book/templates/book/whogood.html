@@ -1,0 +1,58 @@
+{% block content %}
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/stylemy.css' %}" />
+   
+
+</head>
+<div class="inner">
+<body bgcolor="#FFE4E1">
+    <h1></h1>
+    <div align="center">
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'index' %}" class="aiu">HOME</a></div>
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'user' %}" class="aiu">Mypage</a></div>
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'mypage' %}" class="aiu">フォロー</a></div>
+    </div>
+
+    <br>
+    <div class="an"></div>
+    <div class="an1"></div>
+
+    <div align="center">
+    <p>フォローいいね</p>
+
+    <div class="an123"></div>
+            <form action="{% url 'whogood' %}" method="post">
+            {% csrf_token%}
+            <input type = "hidden" name="mode" value="_userform_">
+            {{userform}}
+            <button>検索</button>
+        </form>
+
+    
+    <br><br>
+    {% for item in data %}
+    <table >
+        <tr>
+            <td>
+                    <div class="an12"></div>
+                    <a href="{% url 'startt' item.good.id%}">
+                    <div class="title "align="left">{{item.user}}<br>
+                    <div align="center">いいねしたお題：{{item.good.odai}}</div>
+                    <div class="an12"></div>
+                    </a>
+            </td>
+        </tr>
+    </table>
+
+    {% endfor %}
+    {% endblock %}
+    </div>
+</div>
+</body>
+</html>

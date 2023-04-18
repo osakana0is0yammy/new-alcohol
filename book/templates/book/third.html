@@ -1,0 +1,28 @@
+<!--何もなし、携帯・PCあればできる上級．modelはThird-->
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/styleran.css' %}" />
+   </head>
+
+<body bgcolor="#FFE4E1">
+
+<div align="center">
+    <br><br><br><br>
+    <a href="{% url 'index' %}" class="btn">選択画面に戻る</a>
+    <a href="{% url 'osaindex' %}" class="btn">説明に戻る</a>
+    <div class = "inner">
+        {% for item in data %}
+        <p>お題：{{item.Tcontent}}</p>
+        {% endfor %}
+        <a href="{% url 'third' %}" class="btn1">次へ</a>
+    </div>
+</div>
+
+ 
+</body>
+</html>

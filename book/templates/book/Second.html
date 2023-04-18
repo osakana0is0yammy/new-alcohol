@@ -1,0 +1,30 @@
+<!--何もなし、携帯・PCあればできる中級．modelはSecond-->
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/style.css' %}" />
+</head>
+<body bgcolor="#FFE4E1">
+    <div class = "inner">
+    <div align="center">
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'index' %}" class="aiu">選択画面に戻る</a></div>
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'osaindex' %}" class="aiu">説明に戻る</a></div>
+        <br>
+        <br>
+            {% for item in data %}
+            <p>お題：{{item.Scontent}}</p>
+            {% endfor %}
+            <br>
+            <br>
+            <br>
+            <div style="border: 5px solid; width: 150px;" class="aiu">><a href="{% url 'second' %}" class="aiu">次へ</a></div>
+        </div>
+    </div>
+
+   
+</body>
+</html>

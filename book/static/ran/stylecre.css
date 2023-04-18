@@ -1,0 +1,73 @@
+.aiu{
+    display: inline-flex;
+    justify-content: center;
+
+}
+
+.aiu {
+ color: #fff;
+
+ text-align: center;
+ line-height: 50px;
+ width: auto;
+ height: 50px;
+ background-color: rgb(15, 15, 15);
+ text-decoration-color: #fff;
+}
+
+.aiueo {
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    width: auto;
+    height: 50px;
+    background-color: rgb(15, 15, 15);
+    text-decoration-color: #fff;
+    display: inline-flex;
+    justify-content: center;
+   }
+
+a{
+    color:#FFE4E1;
+    text-decoration:none
+   }
+
+.inner{
+    position: absolute;
+    top: 5%;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    margin: auto;
+    width: 80%;
+    height: 3.2rem;
+    text-align: center;
+}
+
+p{
+    font-size: 40pt;
+}
+
+.kimi{
+    font-size: 20pt;
+}
+
+
+input{
+    color: #FFE4E1;
+    text-decoration: none;
+    font-family: sans-serif; /* 書体もリセットしています。不要であれば削除を */
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: normal;
+    border: none;
+    background: black;
+    margin: 0;
+    padding: 0;
+    outline: none;
+     width: 150px;
+ height: 3.2rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+}

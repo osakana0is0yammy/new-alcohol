@@ -1,0 +1,53 @@
+input.new{
+    display: inline-block;
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    margin: 0.5em 0;
+    line-height: 1;
+}
+
+id_Odai{
+    width: 280px;
+    height: 32px;
+}
+
+.inner{
+    position: absolute;
+    top: 5%;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    margin: auto;
+    width: 80%;
+    height: 3.2rem;
+    text-align: center;
+}
+
+.aiu{
+    display: inline-flex;
+    justify-content: center;
+
+}
+
+.aiu {
+ color: #fff;
+
+ text-align: center;
+ line-height: 50px;
+ width: auto;
+ height: 50px;
+ background-color: rgb(15, 15, 15);
+ text-decoration-color: #fff;
+}
+
+a{
+    color:#FFE4E1;
+    text-decoration:none
+   }
+
+.po{
+    color: #000;
+}

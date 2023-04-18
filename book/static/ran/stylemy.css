@@ -1,0 +1,151 @@
+
+a{
+    color:#000000;
+    text-decoration: none;
+
+}
+
+.btn:hover{
+    color:#DDDDDD;
+    font-size: 2.5em;
+}
+
+p{
+    font-size: 20pt;
+
+    
+}
+
+ 
+.btn {
+    background-color: white;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    margin: 15px;
+    width:300px;
+    height: 900pt;
+    font-size: 30px;
+
+  }
+
+
+
+.inner{
+    position: absolute;
+    top: 5%;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    margin: auto;
+    width: 80%;
+    height: 3.2rem;
+    text-align: center;
+}
+
+.hige{
+    font-size: 5px;
+}
+
+.user{
+    position: absolute;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    margin: auto;
+    width: 80%;
+    height: 3.2rem;
+    text-align: center;
+    
+
+}
+
+.follow{
+    display: block;
+    width: 150px;
+    background: #c8eac3;
+    color: #000;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.follow:hover{
+    background: #000000;
+    color: #FFF;
+}
+
+table{
+    margin: 10px;
+    font: size 14pt;
+    text-align: center;
+    width: 500px;
+    border: 2px #808080 solid;
+
+}
+
+table tr th{
+    background-color: white;
+    color:#000000;
+    padding:2px 10px;
+    border: width 2px;
+}
+
+table tr td{
+    background-color: white;
+    color:#000000;
+    padding:2px 10px;
+    border: width 2px;
+
+}
+
+.aiu{
+    display: inline-flex;
+    justify-content: center;
+
+}
+
+
+.aiu {
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    width: auto;
+    height: 50px;
+    background-color: rgb(15, 15, 15);
+    text-decoration-color: #fff;
+   }
+   
+a.aiu{
+       color:#FFE4E1;
+       text-decoration:none
+      }
+
+td.oo{
+    width:300px;
+
+}
+
+td.de{
+    width:30px;
+
+}
+
+.teee{
+    font-size: 20px;
+}
+
+.deter{
+    width:200px;
+    height:60px;
+}
+
+.oooo{
+    font-size:40px;
+}
+
+.po{
+    color: #000;
+}

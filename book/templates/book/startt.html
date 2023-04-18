@@ -1,0 +1,44 @@
+{% block content %}
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/stylecre.css' %}" />
+   
+
+</head>
+<div class="inner">
+    <body bgcolor="#FFE4E1">
+    <h1></h1>
+    <div align="center">
+        <div style="border: 3px solid; width: 150px;" class="aiu"><a href="{% url 'index' %}" class="btn">HOME</a></div>
+        <div style="border: 3px solid; width: 150px;" class="aiu"><a href="{% url 'user' %}" class="btn">Mypage</a></div>
+    <div class="an"></div>
+    <div align="center" >
+        <p>内容</p>
+        
+        {% for item in data %}
+        <div class="kimi"><li>{{item.content}}</li></div>
+        {% endfor %}
+    </div>
+
+    <a href="{% url 'god' fu.id %}"><button>good!</button></a>
+    {% for message in messages %}
+    <div {% if message.tags %}class="{{message.tags}}"{% endif %} >{{message}}</div>
+    {% endfor %}
+
+    
+    <br><br>
+    {% for item in lolo %}
+    <div style="border: 3px solid; width:auto;" class="aiueo"><a href="{% url 'starttt' item.id%}">ゲーム：{{item.odai}}を開始する</a></div>
+    {% endfor %}
+    <br><br>
+
+    
+
+{% endblock %}
+</body>
+</html>

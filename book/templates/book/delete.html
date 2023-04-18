@@ -1,0 +1,36 @@
+<!--フォローしている人を確認する．-->
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/stylemy.css' %}" />
+   
+
+</head>
+<body bgcolor="#FFE4E1">
+    <div class="inner">
+        <h1></h1>
+    <div align="center">
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'index' %}" class="aiu">HOME</a></div>
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'user' %}" class="aiu">Mypage</a></div>
+
+
+    <br><br><br<br>
+    
+    <div class="teee">以下のゲームを消去します</div><br>
+
+    <div class="oooo">{{data.odai}}</div><br><br>
+    
+            <form action="{% url 'delete' id %}" method="post">
+                {% csrf_token %}
+               <input type="submit" style="width: 400px;" value="よろしければこのボタンを押してください" class="deter">
+            </form>
+
+
+    </div>
+    </div>
+</body>
+</html>

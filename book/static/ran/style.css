@@ -1,0 +1,136 @@
+h1{
+    color:#000000;
+}
+
+a{
+    color:#000000;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.btn:hover{
+    color:#DDDDDD;
+    font-size: 2.5em;
+}
+
+p{
+    font-size: 40pt;
+    
+}
+
+ 
+.btn {
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    width: auto;
+    height: 250px;
+    background-color: rgb(15, 15, 15);
+    text-decoration-color: #fff;
+    font-size:80px;
+     line-height: 3;
+    padding: 10px 0;
+
+  }
+
+.title{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+.link1{
+    padding-left: 1em;
+  padding-right: 1em;
+  height: 3em;
+}
+
+.link2{
+    padding-left: 1em;
+  padding-right: 1em;
+  height: 3em;
+}
+
+.inner{
+    position: absolute;
+    top: 10%;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    margin: auto;
+    width: 80%;
+    height: 3.2rem;
+}
+
+.hige{
+    font-size: 20x;
+}
+
+.aiu{
+    display: inline-flex;
+    justify-content: center;
+
+}
+
+.aiu {
+ color: #fff;
+
+ text-align: center;
+ line-height: 50px;
+ width: auto;
+ height: 50px;
+ background-color: rgb(15, 15, 15);
+ text-decoration-color: #fff;
+}
+
+.aiueo {
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    width: auto;
+    height: 50px;
+    background-color: rgb(15, 15, 15);
+    text-decoration-color: #fff;
+    display: inline-flex;
+    justify-content: center;
+   }
+
+a{
+    color:#FFE4E1;
+    text-decoration:none
+   }
+
+
+   .btnin{
+    display: inline-flex;
+    justify-content: center;
+    color: #fff;
+   
+    text-align: center;
+    line-height: 50px;
+    width: auto;
+    height: 50px;
+    background-color: rgb(15, 15, 15);
+    text-decoration-color: #fff;
+   }
+
+   .btnin{
+    display: inline-flex;
+    justify-content: center;
+    color: #fff;
+   
+    text-align: center;
+    line-height: 50px;
+    width: auto;
+    height: px;
+    background-color: rgb(15, 15, 15);
+    text-decoration-color: #fff;
+    font-size:50px;
+    line-height:3;
+    padding: 110px 0;
+   }
+
+.hige{
+ font-size:40px
+}

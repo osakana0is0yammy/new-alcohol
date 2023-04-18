@@ -1,0 +1,35 @@
+<!--ランダムお題説明欄-->
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/style.css' %}" />
+   
+</head>
+<body bgcolor="#FFE4E1">
+    <div class = "inner">
+    <div align="center">
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'index' %}" class="aiu">HOME</a></div><br>
+        <br><br>
+            <div class="hige">
+                ―――――――――――――――――――――――――――――――――――――――――――――――<br>
+                これから行うゲームの説明です<br>
+                お題が画面に表示されます．該当する人がお酒を飲酒するというルールです．<br>
+                お酒の配分・量などはお題に記載されています．<br>
+                初級は一杯、中級は二杯、上級は二日酔いコースです．<br>
+                **あくまでもお酒を楽しむことを目的としてゲームを行って下さい．<br>
+                ―――――――――――――――――――――――――――――――――――――――――――――――<br>
+            </div>
+            <br><br>
+            <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'first' %}" class="aiu">・初級</a></div>
+            <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'second' %}" class="aiu">・中級</a></div>
+                <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'third' %}" class="aiu">・上級</a></div><br><br><br><br>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
+

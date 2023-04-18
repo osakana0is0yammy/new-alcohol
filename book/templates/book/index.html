@@ -1,0 +1,30 @@
+<!--初期画面．選択-->
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/style.css' %}" />
+   
+
+</head>
+<body bgcolor="#FFE4E1">
+    <div align="center">
+        <div class = "inner">
+            <div style="border: 3px solid; width: 600px;" class="btn"><a href="{% url 'index' %}" class="aiu">開発中</a></div><br><br>
+            <div style="border: 3px solid; width: 600px;" class="btn"><a href="{% url 'index' %}" class="aiu">開発中</a></div><br><br>
+            <div style="border: 3px solid; width: 600px;" class="btn"><a href="{% url 'osakein' %}" class="aiu">お酒危機一髪</a></div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div style="border: 3px solid; width: auto; " class="btn"><a href="{% url 'login'%}" class="aiu">Mypageはこちら</a></div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
+

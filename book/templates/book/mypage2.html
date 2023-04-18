@@ -1,0 +1,75 @@
+{% block content %}
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/stylemy.css' %}" />
+</head>
+
+<div class="inner">
+<body bgcolor="#FFE4E1">
+    <h1></h1>
+    <div align="center">
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'index' %}" class="aiu">HOME</a></div>
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'user' %}" class="aiu">mypage</a></div>
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'whogood' %}" class="aiu">フォローいいね</a></div>
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'mypage' %}" class="aiu">フォローリスト</a></div>
+
+
+    </div>
+
+    <br>
+<div class="an"></div>
+
+ <div class="an1"></div>
+
+    <div align="center">
+    <p></p>
+    {% for message in messages %}
+    <div {% if message.tags %}class="{{message.tags}}"{% endif %} >
+        {{message}}
+    </div>
+    {% endfor %}
+
+    <ul>
+
+            <form action="{% url 'mypage2' %}" method="post">
+                {% csrf_token%}
+                <input type = "hidden" name="mode" value="_userform_">
+                {{userform}}
+                <button>検索</button>
+            </form>
+
+        {% for item in data %}
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script>
+        $(function() {
+            $(".follow").click(function() {
+                $(this).toggleClass("click");
+            });
+        });
+        </script>
+
+        <table >
+            <tr>
+                <td>
+    
+                        <div class="an12"></div>
+                        <div class="title "align="center">user : {{item.username}}</div>
+                            <div  align="right"><a href = "{% url 'add' %}?name={{item.username}}"class="follow">follow</a></div>
+                        <div class="an12"></div>
+                    </a>
+                
+                </td>
+            
+            </tr>
+              {% endfor %}
+        </table>
+    
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!--登録済み-->
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/stylemy.css' %}" />
+   
+
+</head>
+<body bgcolor="#FFE4E1">
+    <div class="inner">
+        <h1></h1>
+        <div align="center">
+            <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'index' %}" class="aiu">HOME</a></div>
+            <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'user' %}" class="aiu">Mypage</a></div>
+            <br><br><br>
+            
+            {% for item in data %}
+            <table>
+                <tr>
+                    <td class="oo"><a href="{% url 'startt' item.id%}">{{item.odai}}</a></td>
+                    <td class="de"><a href="{% url 'delete' item.id%}">削除</a></td>
+                    
+                </tr>
+            </table>
+            {% endfor %}
+
+            <br><br>
+
+        </div>
+ </div>
+
+    
+</body>
+</html>

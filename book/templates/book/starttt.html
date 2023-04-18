@@ -1,0 +1,45 @@
+{% block content %}
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/stylecre.css' %}" />
+   
+
+</head>
+<div class="inner">
+  <body bgcolor="#FFE4E1">
+    <h1></h1>
+    <div align="center">
+        
+      <div style="border: 3px solid; width: 150px;" class="aiu"><a href="{% url 'index' %}" class="btn">HOME</a></div>
+        <div style="border: 3px solid; width: 150px;" class="aiu"><a href="{% url 'user' %}" class="btn">Mypage</a></div>
+
+
+
+
+    <br>
+<div class="an"></div>
+{% for item in data %}
+<p>{{item.content}}</p>
+{% endfor %}
+<script>
+
+
+//更新
+function koshin(){
+  location.reload();
+}
+
+</script>
+
+
+<input type="button"  value="次へ" onclick="koshin()" class="sta">
+</div>
+{% endblock %}
+
+</body>
+</html>

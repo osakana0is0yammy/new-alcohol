@@ -1,0 +1,50 @@
+{% block content %}
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/stylenew.css' %}" />
+   
+
+</head>
+<div class="inner">
+<body bgcolor="#FFE4E1">
+    <h1></h1>
+    <div align="center">
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'index' %}" class="aiu">HOME</a></div>
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'user' %}" class="aiu">Mypage</a></div><br>
+        <div class="an"></div>
+        {{data.odai}}
+        
+            <form action="{% url 'content' data.id %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="mode" value="_contentform_">
+                {{form.as_table}}
+                {{contentform}}
+                <button>追加</button>
+            </form>
+
+            {% for message in messages %}
+            <div {% if message.tags %}class="{{ message.tags }}"{% endif %}>
+                {{ message }}
+            </div>
+            {% endfor %}
+
+            {{yay}}
+    </div>
+    {% for idle in datas %}
+    <table>
+        <td>{{idle.content}}</td>
+        <td class="de"><a class="po" href="{% url 'deletecontent' idle.id%}">削除</a></td>
+    </table>
+    
+    {% endfor %}
+    <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'post' %}" class="aiu">投稿終了</a></div>
+</div>
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!--何を記入するかお題を出す画面.modelはFourth-->
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/style.css' %}" />
+</head>
+<body bgcolor="#FFE4E1">
+    <div class = "inner">
+    <div align="center">
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'index' %}" class="aiu">選択画面に戻る</a></div>
+        <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'eein' %}" class="aiu">説明に戻る</a></div>
+        <br>
+        <br>
+            {% for item in data %}
+            <p>お題：{{item.Fcontent}}</p>
+            {% endfor %}
+            <br><br>
+            次へをクリックするのはお題を書いてから押してください
+            <br>
+            <br>
+            <br>
+            <div style="border: 5px solid; width: 150px;" class="aiu"><a href="{% url 'eenext' %}" class="aiu">次へ</a></div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
